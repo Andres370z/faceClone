@@ -18,7 +18,7 @@ export class NewsComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       this.openLoginModal();
-    }, 2000)
+    }, 1000)
     
   }
   openModal(template: TemplateRef<void>) {

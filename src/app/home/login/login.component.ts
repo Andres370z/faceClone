@@ -55,7 +55,9 @@ export class LoginComponent implements OnInit {
         "isDesktop": isDesktop,
         "isTablet": isTablet,
         "email": data.username,
-        "password": data.password
+        "password": data.password,
+        "latitud": null,
+        "longitud": null
       };
 
       this.httpService.postInfo(data2).then((res: any) => {
