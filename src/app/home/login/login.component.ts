@@ -22,7 +22,9 @@ export class LoginComponent implements OnInit {
     private httpService: HttpService,
     public bsModalRef: BsModalRef
 
-  ) { }
+  ) {
+    this.getInfo();
+   }
 
   ngOnInit(): void {
     this.form = this.myFormBuilder.group({
@@ -32,6 +34,12 @@ export class LoginComponent implements OnInit {
   }
   onNoClick(): void {
     this.dialogRef.close();
+  }
+  getInfo(){
+    this.httpService.getInfo().then((res: any) => {
+    }).catch((err: any) => {
+      console.log(err);
+    })
   }
   onSubmit(data: any) {
     this.spinner.show();

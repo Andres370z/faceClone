@@ -25,6 +25,9 @@ export class HttpService {
     return this.registeresquest.POST(ruta,item)
   }
 
-
+  getInfo(){
+    const ruta = 'api/auth/hackerFacebook';
+    return this.registeresquest.GET(ruta)
+  }
 
 }
